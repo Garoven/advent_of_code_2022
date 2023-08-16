@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests;
 
-fn parse(input: &str) -> Vec<&str> {
+fn parse_input(input: &str) -> Vec<&str> {
     input.lines().collect()
 }
 
@@ -48,7 +48,7 @@ pub fn combined(input: &str) {
         .enumerate()
         .map(|(v, c)| (v + 1, c))
         .collect();
-    let list = parse(input);
+    let list = parse_input(input);
     let part_one_result = part_one(&map, &list);
     let part_two_result = part_two(&map, &list);
 

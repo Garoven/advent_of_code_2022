@@ -13,7 +13,7 @@ fn get_map() -> Vec<(usize, char)> {
 #[test]
 fn part_one_test() {
     let map = get_map();
-    let list = parse(INPUT);
+    let list = parse_input(INPUT);
     let result = part_one(&map, &list);
     let expected = 157;
 
@@ -23,7 +23,7 @@ fn part_one_test() {
 #[test]
 fn part_two_test() {
     let map = get_map();
-    let list = parse(INPUT);
+    let list = parse_input(INPUT);
     let result = part_two(&map, &list);
     let expected = 70;
 
