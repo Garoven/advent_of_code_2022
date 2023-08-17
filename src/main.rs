@@ -15,7 +15,8 @@ fn main() {
         2 => advent_of_code_2022::day_2::combined(&input),
         3 => advent_of_code_2022::day_3::combined(&input),
         4 => advent_of_code_2022::day_4::combined(&input),
-        5..=25 => unimplemented!(),
+        5 => advent_of_code_2022::day_5::combined(&input),
+        6..=25 => unimplemented!(),
         _ => panic!("Select day between 1 and 25"),
     }
 }
