@@ -77,10 +77,8 @@ fn part_two(list: &[(&str, &str)]) -> usize {
     points
 }
 
-pub fn combined(input: &str) {
+pub fn combined(input: &str) -> (crate::Display, crate::Display) {
     let list = parse_input(input);
-    let part_one_result = part_one(&list);
-    let part_two_result = part_two(&list);
 
-    println!("Part one: {part_one_result}\nPart two: {part_two_result}");
+    (Box::new(part_one(&list)), Box::new(part_two(&list)))
 }

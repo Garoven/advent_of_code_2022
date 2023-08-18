@@ -84,10 +84,11 @@ fn part_two(mut magazine: Vec<Vec<char>>, sequences: &[Sequence]) -> String {
         .collect()
 }
 
-pub fn combined(input: &str) {
+pub fn combined(input: &str) -> (crate::Display, crate::Display) {
     let (magazine, sequences) = parse_input(input);
-    let part_one_result = part_one(magazine.clone(), &sequences);
-    let part_two_result = part_two(magazine, &sequences);
 
-    println!("Part one: {part_one_result}\nPart two: {part_two_result}");
+    (
+        Box::new(part_one(magazine.clone(), &sequences)),
+        Box::new(part_two(magazine, &sequences)),
+    )
 }

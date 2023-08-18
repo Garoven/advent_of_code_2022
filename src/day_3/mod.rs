@@ -42,15 +42,16 @@ fn part_two(map: &[(usize, char)], list: &[&str]) -> usize {
     points
 }
 
-pub fn combined(input: &str) {
+pub fn combined(input: &str) -> (crate::Display, crate::Display) {
     let map: Vec<(usize, char)> = ('a'..='z')
         .chain('A'..='Z')
         .enumerate()
         .map(|(v, c)| (v + 1, c))
         .collect();
     let list = parse_input(input);
-    let part_one_result = part_one(&map, &list);
-    let part_two_result = part_two(&map, &list);
 
-    println!("Part one: {part_one_result}\nPart two: {part_two_result}");
+    (
+        Box::new(part_one(&map, &list)),
+        Box::new(part_two(&map, &list)),
+    )
 }
